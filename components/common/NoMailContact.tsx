@@ -1,4 +1,5 @@
 "use client";
+import axios from "axios";
 import { Loader2 } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
@@ -21,13 +22,13 @@ const NoMailContact: React.FC<Props> = ({ mailsSubmitted }) => {
   const handleSendMail = async () => {
     try {
       setIsLoading(true);
-      console.log(name, email, phone, message);
-      // await axios.post("/api/email", {
-      //   name,
-      //   email,
-      //   phone,
-      //   message,
-      // });
+      // console.log(name, email, phone, message);
+      await axios.post("/api/email", {
+        name,
+        email,
+        phone,
+        message,
+      });
       mailsSubmitted();
     } catch (err) {
       console.log("ERROR: ", err);
