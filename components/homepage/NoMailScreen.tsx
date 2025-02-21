@@ -1,5 +1,5 @@
 import Image from "next/image";
-import LogoImg from "../../assets/images/logo.png";
+import LogoImgWhite from "../../assets/images/logo-white.png";
 import NoMailContact from "../common/NoMailContact";
 import Social from "../header/Social";
 
@@ -19,11 +19,11 @@ const NoMailScreen: React.FC<Props> = ({ mailsSubmitted }) => {
       <div className="w-full h-full flex flex-col lg:flex-row items-center justify-center lg:justify-between pt-5 lg:pt-0 px-[14px] lg:px-[40px] 2xl:px-[134px]">
         <div className="flex flex-row items-center justify-between absolute top-5 left-5 w-[90%] lg:w-[95%]">
           <Image
-            src={LogoImg}
+            src={LogoImgWhite}
             width={266}
             height={95}
             alt="logo"
-            className="w-[200px] h-[80px] lg:w-[266px] lg:h-[95px] object-contain"
+            className="w-[200px] h-[80px] lg:w-[266px] lg:h-[95px] object-cover"
           />
         </div>
         <div className="w-full lg:w-[50%] 2xl:w-[45%]">
