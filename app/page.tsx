@@ -16,7 +16,7 @@ import Testimonials from "@/components/homepage/Testimonials";
 import { useState } from "react";
 
 const HomePage = () => {
-  const [detailsSubmitted, setDetailsSubmitted] = useState(true);
+  const [detailsSubmitted, setDetailsSubmitted] = useState(false);
 
   return (
     <div className="min-h-screen">
