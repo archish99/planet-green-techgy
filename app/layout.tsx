@@ -1,5 +1,23 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import {
+  Allura,
+  Cinzel,
+  Cormorant_Garamond,
+  DM_Serif_Display,
+  Geist,
+  Geist_Mono,
+  Italiana,
+  Josefin_Sans,
+  Jost,
+  Kumbh_Sans,
+  Libre_Caslon_Display,
+  Mrs_Saint_Delafield,
+  Nunito,
+  Poppins,
+  Red_Hat_Display,
+  Sofia,
+} from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -10,6 +28,104 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+});
+
+const cormorantGaramond = Cormorant_Garamond({
+  variable: "--font-cormorand-garamond",
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600"],
+});
+
+const allura = Allura({
+  variable: "--font-allura",
+  subsets: ["latin"],
+  weight: ["400"],
+});
+
+const saintDelafield = Mrs_Saint_Delafield({
+  variable: "--font-saint-delafield",
+  subsets: ["latin"],
+  weight: ["400"],
+});
+
+const sofia = Sofia({
+  variable: "--font-sofia",
+  subsets: ["latin"],
+  weight: ["400"],
+});
+
+const italiana = Italiana({
+  variable: "--font-italiana",
+  subsets: ["latin"],
+  weight: ["400"],
+});
+
+const dmSerifDisplay = DM_Serif_Display({
+  variable: "--font-dm-serif-display",
+  subsets: ["latin"],
+  weight: ["400"],
+});
+
+const nunito = Nunito({
+  variable: "--font-nunito",
+  subsets: ["latin"],
+  weight: ["400"],
+});
+
+const cinzel = Cinzel({
+  variable: "--font-cinzel",
+  subsets: ["latin"],
+  weight: ["400"],
+});
+
+const kumbhSans = Kumbh_Sans({
+  variable: "--font-kumbh-sans",
+  subsets: ["latin"],
+  weight: ["400"],
+});
+
+const redHatDisplay = Red_Hat_Display({
+  variable: "--font-red-hat-display",
+  subsets: ["latin"],
+  weight: ["400"],
+});
+
+const poppins = Poppins({
+  variable: "--font-poppins",
+  subsets: ["latin"],
+  weight: ["400"],
+});
+
+const libreCaslonDisplay = Libre_Caslon_Display({
+  variable: "--font-libre-caslon-display",
+  subsets: ["latin"],
+  weight: ["400"],
+});
+
+const jost = Jost({
+  variable: "--font-jost",
+  subsets: ["latin"],
+  weight: ["400"],
+});
+
+const josefinSans = Josefin_Sans({
+  variable: "--font-josefin-sans",
+  subsets: ["latin"],
+  weight: ["400"],
+});
+
+const localPrestigiousFont = localFont({
+  src: "../fonts/Prestigious.otf",
+  display: "auto",
+  weight: "400",
+  variable: "--font-prestigious",
+});
+
+const localSofiaProFont = localFont({
+  src: "../fonts/Sofia-Pro.otf",
+  display: "auto",
+  weight: "400",
+  variable: "--font-sofia-pro",
 });
 
 export const metadata: Metadata = {
@@ -25,7 +141,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${cormorantGaramond.variable} ${allura.variable} ${saintDelafield.variable} ${sofia.variable} ${localPrestigiousFont.variable} ${italiana.variable} ${dmSerifDisplay.variable} ${localSofiaProFont.variable} ${nunito.variable} ${cinzel.variable} ${kumbhSans.variable} ${redHatDisplay.variable} ${poppins.variable} ${libreCaslonDisplay.variable} ${jost.variable} ${josefinSans.variable} antialiased`}
       >
         {children}
       </body>
