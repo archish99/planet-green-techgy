@@ -3,6 +3,7 @@ import axios from "axios";
 import { Loader2 } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
+import toast from "react-hot-toast";
 import ContactImg from "../../assets/images/contact-form.png";
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
@@ -28,6 +29,9 @@ const NoMailContact: React.FC<Props> = ({ mailsSubmitted }) => {
         email,
         phone,
         message,
+      });
+      toast.success("Details submitted successfully", {
+        position: "bottom-center",
       });
       mailsSubmitted();
     } catch (err) {

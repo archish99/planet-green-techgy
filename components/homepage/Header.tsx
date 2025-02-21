@@ -1,8 +1,7 @@
 "use client";
 import { CAROUSEL_ITEMS } from "@/constants";
-import { Mouse } from "lucide-react";
 import Image from "next/image";
-import LogoImg from "../../assets/images/logo.png";
+import LogoWhiteImg from "../../assets/images/logo-white.png";
 import Social from "../header/Social";
 import { Button } from "../ui/button";
 import { Carousel, CarouselContent, CarouselItem } from "../ui/carousel";
@@ -28,20 +27,20 @@ const Header = () => {
               }}
             >
               <div className="w-full h-full flex flex-col lg:flex-row items-center justify-center lg:justify-between pt-5 lg:pt-0 px-[14px] lg:px-[40px] 2xl:px-[134px] relative">
-                <div className="flex flex-row items-center justify-between absolute top-5 left-5 w-[90%] lg:w-[95%]">
+                <div className="flex flex-row items-center justify-center absolute top-5 left-5 w-[90%] lg:w-[95%]">
                   <Image
-                    src={LogoImg}
+                    src={LogoWhiteImg}
                     width={266}
                     height={95}
                     alt="logo"
-                    className="w-[200px] h-[80px] lg:w-[266px] lg:h-[95px] object-contain"
+                    className="w-[200px] h-[80px] lg:w-[266px] lg:h-[95px] object-cover"
                   />
-                  <Button
+                  {/* <Button
                     className="w-[150px] h-[50px] bg-white border border-[#D09C47] text-black rounded-full hover:bg-white"
                     onClick={handleOnClick}
                   >
                     Contact Us
-                  </Button>
+                  </Button> */}
                 </div>
                 <div className="w-full">
                   <p className="text-[24px] lg:text-[70px] font-normal text-white font-serifDisplay text-center mb-5">
@@ -57,9 +56,15 @@ const Header = () => {
                 <div className="absolute bottom-5 lg:bottom-36 lg:top-0 lg:-right-5 2xl:right-10 lg:h-full w-full lg:w-auto lg:mr-10 2xl:mr-0">
                   <Social />
                 </div>
-                <div className="absolute bottom-20 lg:bottom-10 left-1/2 -translate-x-1/2">
-                  <Mouse className="w-[30px] h-[60px] text-white mx-auto" />
-                  <p className="text-lg text-white mt-[10px]">Scroll Down</p>
+                <div className="absolute bottom-32 lg:bottom-10 left-1/2 -translate-x-1/2">
+                  <Button
+                    className="w-[150px] h-[50px] bg-white border border-[#D09C47] text-black rounded-full hover:bg-white"
+                    onClick={handleOnClick}
+                  >
+                    Contact Us
+                  </Button>
+                  {/* <Mouse className="w-[30px] h-[60px] text-white mx-auto" />
+                  <p className="text-lg text-white mt-[10px]">Scroll Down</p> */}
                 </div>
               </div>
             </CarouselItem>

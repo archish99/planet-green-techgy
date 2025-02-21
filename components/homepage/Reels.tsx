@@ -1,4 +1,7 @@
 "use client";
+
+import { Button } from "../ui/button";
+
 const Reels = () => {
   return (
     <div className="pb-10 pt-32 lg:py-20 px-[14px] lg:px-20">
@@ -40,7 +43,20 @@ const Reels = () => {
           />
         </video>
       </div>
-      <p
+      <div className="flex justify-center mt-[30px] lg:mt-[100px]">
+        <Button
+          className="w-[330px] h-[60px] rounded-full bg-white border border-[#D7B47B] text-black hover:bg-white"
+          onClick={() =>
+            window.open(
+              "https://www.instagram.com/planetgreeneco_official/",
+              "_blank"
+            )
+          }
+        >
+          Explore
+        </Button>
+      </div>
+      {/* <p
         className="text-[24px] text-[#003B70] text-center underline cursor-pointer mt-[30px] lg:mt-[100px]"
         onClick={() =>
           window.open(
@@ -50,7 +66,7 @@ const Reels = () => {
         }
       >
         Explore
-      </p>
+      </p> */}
     </div>
   );
 };

@@ -34,7 +34,7 @@ const MoveIn = () => {
         alt="move-in"
         className="w-[142px] h-[116px] lg:w-[400px] lg:h-[500px] 2xl:w-[641px] 2xl:h-[455px] object-contain absolute right-[15%] lg:right-[5%] 2xl:right-[15%] -top-10 lg:-top-20"
       />
-      <div className="absolute left-16 lg:left-[15%] top-[18%] px-[14px] lg:px-0">
+      <div className="absolute left-[54px] lg:left-[18%] top-[18%] px-[14px] lg:px-0">
         <p className="text-[15px] lg:text-[46px] text-white text-left font-jost">
           Be a Part of a<br className="block lg:hidden" /> Greener Tomorrow
         </p>

@@ -18,6 +18,7 @@ import {
   Sofia,
 } from "next/font/google";
 import localFont from "next/font/local";
+import { Toaster } from "react-hot-toast";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -144,6 +145,16 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} ${cormorantGaramond.variable} ${allura.variable} ${saintDelafield.variable} ${sofia.variable} ${localPrestigiousFont.variable} ${italiana.variable} ${dmSerifDisplay.variable} ${localSofiaProFont.variable} ${nunito.variable} ${cinzel.variable} ${kumbhSans.variable} ${redHatDisplay.variable} ${poppins.variable} ${libreCaslonDisplay.variable} ${jost.variable} ${josefinSans.variable} antialiased`}
       >
         {children}
+        <Toaster
+          toastOptions={{
+            success: {
+              style: {
+                backgroundColor: "green",
+                color: "white",
+              },
+            },
+          }}
+        />
       </body>
     </html>
   );

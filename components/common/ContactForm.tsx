@@ -2,6 +2,7 @@
 import axios from "axios";
 import { Loader2 } from "lucide-react";
 import { useState } from "react";
+import toast from "react-hot-toast";
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
 import { Textarea } from "../ui/textarea";
@@ -22,6 +23,9 @@ const ContactForm = () => {
         email,
         phone,
         message,
+      });
+      toast.success("Details submitted successfully", {
+        position: "bottom-center",
       });
       setFirstName("");
       setLastName("");
